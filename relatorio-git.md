@@ -1,29 +1,27 @@
-# Relatório de Prática: Uso do Git e GitHub em POO
+# Relatório de Prática: Implementação de Camada ORM/CRUD
 
-## 1. Criação e Clonagem de Repositórios
-O repositório público 'POO' foi gerado na interface do GitHub e clonado localmente para a máquina de trabalho via terminal.
+Este documento apresenta a persistência de dados da classe de modelo `Veiculo` pertencente ao projeto de Gestão de Manutenção Automotiva, mapeada de forma relacional utilizando JDBC e SQLite.
 
-### Repositório Criado na Nuvem
-![Tela do GitHub](images/print1_github.png)
+## Demonstração das Operações CRUD
 
-### Clonagem e Estruturação de Pastas
-![Clonagem no Terminal](images/print2_clone.png)
+Todos os testes foram executados com sucesso em uma única rotina na classe `Main`, conforme demonstrado na captura de tela unificada abaixo.
 
----
+### 1. Inserção de Dados (Create)
+O método mapeia os atributos da instância do objeto para parâmetros de uma query `INSERT`. No terminal, vemos o sucesso na inserção do Civic e do Uno.
 
-## 2. Edição de Conteúdo e Commits
-Modificamos o arquivo `README.md` principal para testar o fluxo local do Git (Área de Preparação e Histórico).
+![CRUD Executado com Sucesso](images/print_crud.png)
 
-### Processo de Commit Local
-![Commit de Alterações](images/print3_commit.png)
+### 2. Recuperação e Mapeamento de Linhas para Objetos (Retrieve)
+O método executa um `SELECT`, percorre o ponteiro de resultados (`ResultSet`) e monta instâncias reais da classe Java populando uma lista.
 
----
+![CRUD Executado com Sucesso](images/print_crud.png)
 
-## 3. Criação e Alteração de Ramos (Branches)
-Criamos um ramo paralelo chamado `sub-atividade` para simular o desenvolvimento de uma nova feature sem impactar o código estável da branch `main`.
+### 3. Atualização de Registros (Update)
+Altera os dados textuais/numéricos diretamente nas colunas correspondentes através do ID do objeto representativo (Modificação do Civic para a versão Touring Turbo).
 
-### Criação e Alternância de Branch
-![Criação da Branch](images/print4_branch.png)
+![CRUD Executado com Sucesso](images/print_crud.png)
 
-### Envio do Novo Ramo para o GitHub
-![Push da Branch](images/print5_push.png)
+### 4. Remoção Física (Delete)
+Exclui o registro da tabela correspondente utilizando a chave primária (Remoção do Uno, deixando apenas o Civic no banco).
+
+![CRUD Executado com Sucesso](images/print_crud.png)
