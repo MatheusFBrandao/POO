@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ConexaoDB
+comment1.params=
+comment1.target=java.sql.Connection\ getConexao()
+comment2.params=
+comment2.target=void\ inicializarBanco()
+numComments=3

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=VeiculoDAO
+comment1.params=veiculo
+comment1.target=void\ criar(Veiculo)
+comment2.params=
+comment2.target=java.util.List\ listarTodos()
+comment3.params=veiculo
+comment3.target=void\ atualizar(Veiculo)
+comment4.params=id
+comment4.target=void\ deletar(int)
+numComments=5
